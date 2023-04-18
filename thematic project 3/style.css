@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito;
+}
+
+html, body{
+    background-color: #fff;
+}
+main{
+    padding-bottom: 5rem;
+}
+header{
+    margin-bottom: 2rem;
+}
+
+nav{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    padding: 0.75rem 0;
+}
+
+h1{
+    font-size: 30px;
+    margin-bottom: 0.75rem;
+}
+
+/* Global Styles */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.h-10{ height: 2.5rem }
+.w-10{ width: 2.5rem }
+
+
+/* Specific Styles */
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 5rem;
+    height: 5rem;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.nav-links li:not(.nav-links li:first-child){
+    margin-left: 1rem;
+}
+
+.nav-links a{
+    color: #4b5563;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.nav-links a.current{
+    color: #374151;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.page-content{
+    display: flex;
+    flex-direction: row;
+}
+.page-writing{
+    padding-right: 3rem;
+}
+
+/* Carousel Styles */
+
+.carousel{
+    position: relative;
+    height: 40rem;
+    width: 40rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-control{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    color: white;
+    text-align: center;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 150ms ease-in-out;
+}
+.carousel-control:hover{
+    opacity: 1;
+}
+
+.carousel-control-prev{
+    left: 0;
+}
+.carousel-control-next{
+    right: 0;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: none;;
+}
+
+.slide[data-active-slide]{
+    display: block;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Mailing List */
+.form-card{
+    width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 0.5rem;
+}
+.form-card h1{
+    font-size: 24px;
+    text-align: center;
+}
+.form-card form{
+    margin-top: 1.5rem;
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.form-input:not(.form-input:first-child) {
+    margin-top: 10px;
+}
+.form-input label{
+    font-size: 14px;
+    color: #4b5563;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.form-input input{
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    border: 1px solid #9ca3af;
+    border-radius: 0.25rem;
+}
+.form-input input:focus{
+    box-shadow: 0 0 0 4px #e5e7eb;
+}
+.form-input span{
+    color: #ff3333;
+    font-size: 12px;
+}
+
+.form-submit{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-submit span{
+    color: #00DA71;
+    font-weight: 600;
+}
+.form-input button{
+    background-color: #9ca3af;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.075rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.form-input button:disabled{
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 1276px) {
+    .container{ 
+        max-width: 768px;
+    }
+    .carousel{ 
+        height: 25rem;
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{ 
+        max-width: 576px;
+    }
+    .page-content{ 
+        flex-direction: column;
+    }
+    .page-writing{
+        padding-right: 0;
+    }
+    .carousel{ 
+        height: 25rem;
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{ 
+        width: calc(100% - 48px);
+    }
+
+    .navbar{
+        flex-direction: column;
+    }
+
+    .carousel{ 
+        height: 15rem;
+    }
+    .carousel img{
+        object-position: top;
+    }
+
+    .album{
+        flex-direction: column;
+    }
+    .album-body{
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+
+    .form-card{
+        width: 100%;
+    }
+}

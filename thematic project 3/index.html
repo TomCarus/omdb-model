@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1 Name</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container navbar">
+                <a href="index.html" title="Home">
+                    <img class="logo" src="images/Logo.jpg" alt="4PF Logo">
+                </a>
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html" title="Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="Movies.html" title="Movie">Movie</a>
+                    </li>
+                    
+                </ul>
+            </div>    
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="page-content">
+                <div class="page-writing">
+                    <h1>Title</h1> 
+                    <hr>
+                    <br>
+
+
+                    <p>Welcome,</p>
+                    <br>
+                    
+
+                     <P> Search millions of movies today, go to the movies tab to start searching!
+                      We have a range of movies to search from where you can find when it was 
+                      released, the authurs and the plot.</p>
+                    
+                </div>
+                <div class="carousel">
+                    <div class="slide" data-active-slide>
+                        <img src="images/2fast2furious.jpg" alt="Lilbaby next to a white Lamborghini">
+                    </div>
+                    <div class="slide">
+                        <img src="images/mario.jpg" alt="Lilbaby next to a white Mercedes">
+                    </div>
+                    <div class="slide">
+                        <img src="images/johnwick.jpg" alt="Lilbaby next to a red Jeep">
+                    </div>
+                    <div class="slide">
+                        <img src="images/thewolfofwallstreet.jpg" alt="Lilbaby next to a white Ferrari">
+                    </div>
+                    <div class="slide">
+                        <img src="images/harrypotter.jpg" alt="Lilbaby next to his private plane">
+                    </div>
+        
+                    <button class="carousel-control carousel-control-prev" onclick="changeSlide(-1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <button class="carousel-control carousel-control-next" onclick="changeSlide(1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+</html>
