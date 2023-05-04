@@ -9,7 +9,7 @@ submitBtn.addEventListener("click", function() {
     if (xhr.status === 200) {
       var movieData = JSON.parse(xhr.responseText);
       // Display movie information
-      var poster = document.getElementById("poster");
+      var poster = document.getElementById("poster"); //creating vars for each element to change
       var title = document.getElementById("title");
       var director = document.getElementById("director");
       var starring = document.getElementById("starring");
@@ -18,7 +18,7 @@ submitBtn.addEventListener("click", function() {
       var description = document.getElementById("description")
 
       
-       poster.innerHTML = '<img src="'+movieData.Poster+'"  alt="movie poster">';
+       poster.innerHTML = '<img src="'+movieData.Poster+'"  alt="movie poster">'; //changing the text of the elements
        title.innerHTML = movieData.Title;
        director.innerHTML = "Directed by: "+movieData.Director;
        starring.innerHTML = "Starring: "+movieData.Actors;
@@ -28,4 +28,11 @@ submitBtn.addEventListener("click", function() {
     }
   }
   xhr.send();
+});
+
+var saveBtn = document.getElementById("saveBtn")
+saveBtn.addEventListener("click", function() {
+  //DATABASE STUFF HERE
+
+
 });
